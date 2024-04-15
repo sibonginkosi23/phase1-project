@@ -16,14 +16,9 @@ public class project {
 		do
 		{
 			
-			System.out.println("----------------************----------------");
-			
 			System.out.println("__________Welcome to my Application_________");
-			System.out.println("______________SAKSHI GOYAL__________________");
+			System.out.println("______________SIBONGINKOSI__________________");
 			System.out.println("__________Java Full Stack Developer__________ ");
-			
-			System.out.println("----------------************----------------");
-			
 			
 			System.out.println("operations");
 			System.out.println("1. File creation");
@@ -44,7 +39,7 @@ public class project {
 				
 				fname=sc.next();
 				
-				File f = new File("C:\\Users\\LENOVO\\OneDrive\\Desktop\\filesop\\"+fname+".txt");
+				File f = new File("C:\\Users\\Mashe\\eclipse-workspace\\fileHandlingproject\\src\\fileHandlingproject\\filesoperation\\"+fname+".txt");
 				
 				
 				if(f.createNewFile())
@@ -73,7 +68,7 @@ public class project {
 				System.out.println("Enter the content you wanna write in a file !!");
 				String content=sc1.nextLine();
 				
-				FileWriter fw = new FileWriter("C:\\Users\\LENOVO\\OneDrive\\Desktop\\filesop\\"+fname+".txt");
+				FileWriter fw = new FileWriter("C:\\Users\\Mashe\\eclipse-workspace\\fileHandlingproject\\src\\fileHandlingproject\\filesoperation\\"+fname+".txt");
 				fw.write(content);
 				
 				System.out.println("Data Written in the file successfully !!");
@@ -85,7 +80,7 @@ public class project {
 				System.out.println("Enter the file name whose data you wanna read !!");
 				fname=sc.next();
 				
-				File f2= new File("C:\\Users\\LENOVO\\OneDrive\\Desktop\\filesop\\"+fname+".txt");
+				File f2= new File("C:\\Users\\Mashe\\eclipse-workspace\\fileHandlingproject\\src\\fileHandlingproject\\filesoperation\\"+fname+".txt");
 				Scanner sc2 = new Scanner(f2);
 				
 				while(sc2.hasNextLine())
@@ -104,7 +99,7 @@ public class project {
 				System.out.println("Enter file name which you wanna delete ");
 				fname=sc.next();
 				
-				File f3 = new File("C:\\Users\\LENOVO\\OneDrive\\Desktop\\filesop\\"+fname+".txt");
+				File f3 = new File("C:\\Users\\Mashe\\eclipse-workspace\\fileHandlingproject\\src\\fileHandlingproject\\filesoperation\\"+fname+".txt");
 				
 				f3.delete();
 				
@@ -123,7 +118,7 @@ public class project {
 				System.out.println("Enter the file name for searching !!");
 				fname=sc.next();
 				
-				File f5 = new File("C:\\Users\\LENOVO\\OneDrive\\Desktop\\filesop\\");
+				File f5 = new File("C:\\Users\\Mashe\\eclipse-workspace\\fileHandlingproject\\src\\fileHandlingproject\\filesoperation\\");
 				
 				String[] list = f5.list();
 				int fl=0;
@@ -157,7 +152,7 @@ public class project {
 				
 				System.out.println("List of Files and Folders are :");
 				
-				File f6 = new File("C:\\Users\\LENOVO\\OneDrive\\Desktop\\filesop\\");
+				File f6 = new File("C:\\Users\\Mashe\\eclipse-workspace\\fileHandlingproject\\src\\fileHandlingproject\\filesoperation\\");
 				
 				File[] l1 = f6.listFiles();
 				
