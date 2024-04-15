@@ -9,42 +9,43 @@ public class project {
 
 	public static void main(String[] args) throws IOException {
 		// TODO Auto-generated method stub
+		// System.out.println(System.getProperty(user.dir));
 		
-		Scanner sc= new Scanner(System.in);
+		Scanner scanner1 = new Scanner(System.in);
 		int ch;
 		String fname;
 		do
 		{
 			
 			System.out.println("__________Welcome to my Application_________");
-			System.out.println("______________SIBONGINKOSI__________________");
+			System.out.println("______________SIBONGINKOSI BONEFANTURE MASHELE__________________");
 			System.out.println("__________Java Full Stack Developer__________ ");
 			
 			System.out.println("operations");
-			System.out.println("1. File creation");
-			System.out.println("2. Write in the file ");
-			System.out.println("3. Reading a file ");
-			System.out.println("4. Delete the file ");
-			System.out.println("5. Search the file");
-			System.out.println("6. List of Files ");
+			System.out.println("1. Create a new file");
+			System.out.println("2. Write into a file ");
+			System.out.println("3. Read a file ");
+			System.out.println("4. Delete a file ");
+			System.out.println("5. Search for a file");
+			System.out.println("6. List of all files ");
 			System.out.println("7. Exit");
 			
-			System.out.println("enter your choice !!");
-			ch=sc.nextInt();
+			System.out.println("enter your choice ");
+			ch=scanner1.nextInt();
 			switch(ch)
 			{
 			case 1:
 				
 				System.out.println("Enter the file name to create :");
 				
-				fname=sc.next();
+				fname=scanner1.next();
 				
 				File f = new File("C:\\Users\\Mashe\\eclipse-workspace\\fileHandlingproject\\src\\fileHandlingproject\\filesoperation\\"+fname+".txt");
 				
 				
 				if(f.createNewFile())
 				{
-					System.out.println("file created successfully !!");
+					System.out.println("file has been created successfully");
 				}
 				else
 				{
@@ -54,42 +55,42 @@ public class project {
 					}
 					else
 					{
-						System.out.println("error in creating the file !!");
+						System.out.println("error in creating the file ");
 					}
 				}
 				break;
 			case  2:
 				
-				System.out.println("Enter the file name where you wanna write !");
-				fname=sc.next();
+				System.out.println("Enter the file name where you wanna write ");
+				fname=scanner1.next();
 				
 				Scanner sc1= new Scanner(System.in);
 				
-				System.out.println("Enter the content you wanna write in a file !!");
+				System.out.println("Enter the content you wanna write in a file ");
 				String content=sc1.nextLine();
 				
 				FileWriter fw = new FileWriter("C:\\Users\\Mashe\\eclipse-workspace\\fileHandlingproject\\src\\fileHandlingproject\\filesoperation\\"+fname+".txt");
 				fw.write(content);
 				
-				System.out.println("Data Written in the file successfully !!");
+				System.out.println("Data Written in the file successfully ");
 				
 				fw.close();
 				break;
 			case 3:
 				
-				System.out.println("Enter the file name whose data you wanna read !!");
-				fname=sc.next();
+				System.out.println("Enter the file name whose data you wanna read ");
+				fname=scanner1.next();
 				
 				File f2= new File("C:\\Users\\Mashe\\eclipse-workspace\\fileHandlingproject\\src\\fileHandlingproject\\filesoperation\\"+fname+".txt");
-				Scanner sc2 = new Scanner(f2);
+				Scanner readSc = new Scanner(f2);
 				
-				while(sc2.hasNextLine())
+				while(readSc.hasNextLine())
 				{
-					String line=sc2.nextLine();
+					String line=readSc.nextLine();
 					System.out.println(line);
 				}
 				
-				sc2.close();
+				readSc.close();
 				
 				
 				
@@ -97,7 +98,7 @@ public class project {
 			case 4:
 				
 				System.out.println("Enter file name which you wanna delete ");
-				fname=sc.next();
+				fname=scanner1.next();
 				
 				File f3 = new File("C:\\Users\\Mashe\\eclipse-workspace\\fileHandlingproject\\src\\fileHandlingproject\\filesoperation\\"+fname+".txt");
 				
@@ -105,18 +106,18 @@ public class project {
 				
 				if(f3.exists())
 				{
-					System.out.println("File deleted uccessfully !!");
+					System.out.println("Error found in deleting the file ");
 				}
 				else
 				{
-					System.out.println("Error found in deleting the file !!");
+					System.out.println("File deleted uccessfully ");
 				}
 				
 				break;
 			case 5:
 				
-				System.out.println("Enter the file name for searching !!");
-				fname=sc.next();
+				System.out.println("Enter the file name for searching ");
+				fname=scanner1.next();
 				
 				File f5 = new File("C:\\Users\\Mashe\\eclipse-workspace\\fileHandlingproject\\src\\fileHandlingproject\\filesoperation\\");
 				
@@ -124,7 +125,7 @@ public class project {
 				int fl=0;
 				if(list==null)
 				{
-					System.out.println("there is no file present in the directory !");
+					System.out.println("there is no file present in the directory ");
 				}
 				else
 				{
@@ -133,7 +134,7 @@ public class project {
 						String sfile= list[i];
 						if(sfile.equalsIgnoreCase(fname))
 						{
-							System.out.println("file found in the directory successfully!!");
+							System.out.println("file found in the directory successfully");
 						
 							fl=1;
 						}
@@ -141,7 +142,7 @@ public class project {
 					
 					if(fl==0)
 					{
-						System.out.println("file not found !");
+						System.out.println("file not found ");
 					}
 				}
 				
@@ -169,11 +170,11 @@ public class project {
 				}
 				break;
 			case 7:
-				System.out.println("Thankyou for using the Application ! ");
+				System.out.println("Thank you for using the Application  ");
 				System.exit(ch);
 				break;
 			default:
-				System.out.println("enter the choice again !! ");
+				System.out.println("zPlease enter a valid option ");
 			}
 		}
 		while(true);
