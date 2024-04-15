@@ -17,7 +17,7 @@ public class project {
 		{
 			
 			System.out.println("__________Welcome to my Application_________");
-			System.out.println("______________SIBONGINKOSI__________________");
+			System.out.println("______________SIBONGINKOSI BONEFANTURE MASHELE__________________");
 			System.out.println("__________Java Full Stack Developer__________ ");
 			
 			System.out.println("operations");
