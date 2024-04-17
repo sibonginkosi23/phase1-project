@@ -19,9 +19,9 @@ public class project {
 		do
 		{
 			
-			System.out.println("__________Welcome to my Application_________");
-			System.out.println("______________SIBONGINKOSI BONEFANTURE MASHELE__________________");
-			System.out.println("__________Java Full Stack Developer__________ ");
+			System.out.println("***************Welcome to my Application************************");
+			System.out.println("++++++++++++SIBONGINKOSI BONEFANTURE MASHELE+++++++++++++++++");
+			System.out.println("***************Java Full Stack Developer************************");
 			
 			System.out.println("operations");
 			System.out.println("1. Create a new file");
@@ -184,6 +184,7 @@ public class project {
 		                    break;
 		            }
 		        } while (choice != 0);
+		        break;
 		        
 		    //case 7    
 			case 7:
