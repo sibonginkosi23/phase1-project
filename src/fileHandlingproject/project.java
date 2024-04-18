@@ -10,8 +10,6 @@ import java.util.Scanner;
 public class project {
 
 	public static void main(String[] args) throws IOException {
-		// TODO Auto-generated method stub
-		// System.out.println(System.getProperty(user.dir));
 		
 		Scanner scanner1 = new Scanner(System.in);
 		int ch;
@@ -76,7 +74,7 @@ public class project {
 				FileWriter fw = new FileWriter("C:\\Users\\Mashe\\eclipse-workspace\\fileHandlingproject\\src\\fileHandlingproject\\filesoperation\\"+fname+".txt");
 				fw.write(content);
 				
-				System.out.println("Data Written in the file successfully ");
+				System.out.println("Data Written into file successfully ");
 				fw.close();
 				break;
 				
@@ -101,13 +99,28 @@ public class project {
 			case 4:
 				
 				System.out.println("Enter file name which you wanna delete ");
+				File f6 = new File("C:\\Users\\Mashe\\eclipse-workspace\\fileHandlingproject\\src\\fileHandlingproject\\filesoperation\\");
+				
+				File[] l1 = f6.listFiles();
+				
+				for(File fi: l1)
+				{
+					if(fi.isDirectory())
+					{
+						System.out.println(fi.getName());
+					}
+					else if(fi.isFile())
+					{
+						System.out.println(fi.getName());
+					}
+				}
 				fname=scanner1.next();
 				
 				File f3 = new File("C:\\Users\\Mashe\\eclipse-workspace\\fileHandlingproject\\src\\fileHandlingproject\\filesoperation\\"+fname+".txt");
 				
 				
 				if (!f3.exists()) {
-			        System.out.println("**File name is either incorrect or file does not exist! ");
+			        System.out.println(" File name is either incorrect or file does not exist ");
 			        break;
 			    }
 
@@ -196,7 +209,7 @@ public class project {
 			}
 		}
 		while(true);
-
+//method for listing files
 	}
 	private static void listFilesAndFolders(String rootDirectory, String sortOrder) {
         File directory = new File(rootDirectory);
