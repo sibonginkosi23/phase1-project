@@ -137,7 +137,7 @@ public class project {
 				
 			//case 5 searching
 			case 5:
-				System.out.println("Enter the file name for searching ");
+				System.out.println("Enter the file name for searching (include format eg .txt) ");
 				fname=scanner1.next();
 				
 				File f5 = new File("C:\\Users\\Mashe\\eclipse-workspace\\fileHandlingproject\\src\\fileHandlingproject\\filesoperation\\");
